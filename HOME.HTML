@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        :root {
+            /* Keeping your original colors */
+            --dark-bg: #1e272e;
+            --accent: #00cec9;
+            --page-bg: #f2f2f2;
+            --text-color: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--page-bg);
+            color: var(--text-color);
+        }
+
+        /* --- NEW FACEBOOK STYLE HEADER --- */
+        header {
+            background: #ffffff;
+            margin-bottom: 80px; /* Space for content */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Cover Photo Background */
+        .cover-photo {
+            height: 300px;
+            width: 100%;
+            background: linear-gradient(135deg, #1e272e 0%, #2d3436 100%); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Container for Profile and Nav */
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: -100px; /* Pulls profile up to overlap cover */
+        }
+
+        /* BIG FACEBOOK-STYLE PROFILE LOGO */
+        .profile-logo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 6px solid #ffffff; /* White border */
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background-color: #ddd; /* Fallback color */
+            transition: transform 0.3s ease;
+        }
+
+        .profile-logo:hover {
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+
+        .header-text {
+            text-align: center;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            color: var(--dark-bg);
+            font-size: 2rem;
+        }
+
+        .header-text p {
+            margin: 5px 0 20px 0;
+            color: #666;
+        }
+
+        nav {
+            width: 100%;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--dark-bg);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px 20px 40px 20px;
+        }
+
+        h2 {
+            color: var(--dark-bg);
+            border-bottom: 2px solid var(--dark-bg);
+            display: inline-block;
+            margin-bottom: 25px;
+            padding-bottom: 5px;
+        }
+
+        /* Modern Card Style (Optional enhancement to your boxes) */
+        .card-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .about-box p {
+            line-height: 1.6;
+        }
+
+        /* Skills */
+        .skills span {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* Projects */
+        .project {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: var(--dark-bg);
+        }
+
+        /* Education & Experience */
+        .education, .experience, .contact-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .contact-box p {
+            margin: 8px 0;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .header-container {
+                top: -80px;
+            }
+            .profile-logo {
+                width: 160px;
+                height: 160px;
+            }
+            .header-text h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER WITH COVER PHOTO AND BIG FACEBOOK LOGO -->
+    <header>
+        <div class="cover-photo"></div>
+        
+        <div class="header-container">
+            <!-- Your original image source -->
+            <img src="unnamed.jpg" alt="Profile Logo" class="profile-logo">
+
+            <div class="header-text">
+                <h1>KAISER C. EMBRADO</h1>
+                <p>Frontend Developer | Student | Tech Enthusiast</p>
+            </div>
+
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ABOUT (Restored Original Text) -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card-box about-box">
+            <p>
+                Hello! I am a passionate web developer who enjoys creating
+                clean and simple websites. I am currently learning frontend
+                development and improving my skills every day.
+            </p>
+            <p>
+                My goal is to become a professional web developer and build
+                user-friendly web applications.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS (Restored Original List) -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript (Basics)</span>
+            <span>Responsive Design</span>
+            <span>Git & GitHub</span>
+            <span>VS Code</span>
+        </div>
+    </section>
+
+    <!-- PROJECTS (Restored Original Text) -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Personal Portfolio</h3>
+            <p>A personal portfolio website created using HTML and CSS.</p>
+        </div>
+
+        <div class="project">
+            <h3>Landing Page</h3>
+            <p>A simple landing page with a modern layout.</p>
+        </div>
+
+        <div class="project">
+            <h3>Basic Form Design</h3>
+            <p>Designed a contact form using HTML and CSS.</p>
+        </div>
+    </section>
+
+    <!-- EDUCATION (Restored Original Text) -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education">
+            <h3>Bachelor’s Degree / Diploma</h3>
+            <p>College of San Francisco Javier</p>
+            <p>2022 – 2026</p>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE (Restored Original Text) -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience">
+            <h3>Frontend Developer (Fresher)</h3>
+            <p>
+                Worked on basic websites using HTML and CSS and learned
+                responsive design principles.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT (Restored Original Text) -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-box">
+            <p><strong>Email:</strong> EMBRADOKAISER191@email.com</p>
+            <p><strong>Phone:</strong> +91 12345 67890</p>
+            <p><strong>Location:</strong> Potungan, Dapitan City, ZND</p>
+            <p><strong>GitHub:</strong> github.com/yourname</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/yourname</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Kaiser C. Embrado | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
